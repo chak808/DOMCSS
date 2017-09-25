@@ -1,17 +1,18 @@
 <html>
   <head>
     <script>
-      function sayHello() {
-        var x = new Date()
-document.getElementById('Aloha').innerHTML = "Hello today is the" + x.getDate();
-
+      function userName() {
+        if (window.event.keyCode == 13)
+        {
+            var userName = document.getElementById('userName').value;
+            document.getElementById('hi').innerHTML="Hello " + userName;
+        }
 }
     </script>
   </head>
-  <body onload="sayHello()">
-    <h1 id ="Aloha">
-
-    </h1>
-
   <body>
+    <h1 id ="hi"></h1>
+    <input type="text" id="userName" onkeypress="userName()">
+
+  </body>
 </html>
