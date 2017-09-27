@@ -1,0 +1,14 @@
+<div id = "spinner" onmousemove="spin()">
+<img src = "https://multimedia.bbycastatic.ca/multimedia/products/500x500/106/10671/10671263.jpg">
+</div>
+
+
+
+
+var x = 0;
+var y = 0;
+function spin() {
+y++
+x+=y;
+document.getElementById("spinner").style.transform = "rotate("+x+"deg)";
+}
